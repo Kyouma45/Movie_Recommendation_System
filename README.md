@@ -1,49 +1,38 @@
 # Movie Recommendation System
 
-### About this project:
-This is a streamlit web application that can recommend various kinds of similar movies based on a user interest. Here are some screenshots:
-![Screenshot from 2024-01-13 19-49-08](https://github.com/Kyouma45/Movie_Recommendation_System/assets/67496078/a9638c40-56db-44f4-a99a-360325c64e3a)
+### About This Project:
+This is a **Streamlit web application** that provides personalized movie recommendations based on user interests. The system employs a **content-based filtering algorithm**, which suggests movies with similar attributes to the ones the user has shown interest in. Below are some screenshots showcasing the app's interface:
 
-![Screenshot from 2024-01-13 19-50-20](https://github.com/Kyouma45/Movie_Recommendation_System/assets/67496078/498d35c6-c8c0-444b-afaa-c461ba7a87c8)
-![Screenshot from 2024-01-13 19-51-44](https://github.com/Kyouma45/Movie_Recommendation_System/assets/67496078/d724272b-58bb-4b47-acb2-e8ede2f14bda)
+![Screenshot 1](https://github.com/Kyouma45/Movie_Recommendation_System/assets/67496078/a9638c40-56db-44f4-a99a-360325c64e3a)
+![Screenshot 2](https://github.com/Kyouma45/Movie_Recommendation_System/assets/67496078/498d35c6-c8c0-444b-afaa-c461ba7a87c8)
+![Screenshot 3](https://github.com/Kyouma45/Movie_Recommendation_System/assets/67496078/d724272b-58bb-4b47-acb2-e8ede2f14bda)
 
+### Features:
+This model uses a **content-based filtering algorithm**.
 
-This model uses content-based filtering algorithm.
+**Content-Based Filtering**:
+- Content-based systems use item attributes (such as movie genres, cast, director, etc.) to make recommendations.
+- Systems like Twitter and YouTube use similar algorithms to suggest content based on user preferences.
+- The system forms embeddings (vectors) based on features, such as the movies you watch or music you listen to.
+- **Recommendation Approach**: It creates a vector of item features and compares it with the user’s preferences to recommend similar items.
+- **Advantages**: Personalized suggestions based on past user behavior.
+- **Limitations**: May lead to excessive specialization (i.e., the system might only recommend items from the same categories, missing out on other potentially interesting items).
 
- Content-Based :
+### Data:
+Data is sourced from the [TMDb Movie Metadata Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata/data).
 
- + Content-based systems, which use characteristic information and takes item attributes into consideration.
+### Model Overview:
+The model uses **Cosine Similarity** to compare movies:
+1. **Cosine Similarity** is a metric that measures the similarity between two vectors.
+2. Vectors are generated from movie features using a **NumPy array**.
+3. The `cosine_similarity()` function calculates the similarity between two vectors, with values ranging from [0,1].
+   - **0**: Completely dissimilar.
+   - **1**: Completely similar.
 
-  + Twitter, Youtube.
+### Steps to Run the Project:
 
-  + Which music are you listening to, what singer are you watching. Form embeddings for the features.
-
-  + User-specific actions or similar items recommendation.
-
-  + It will create a vector of it.
-
-  + These systems make recommendations using a user's item and profile features. They hypothesize that if a user was interested in an item in the past, they will once again be interested in it in the future
-
-  + One issue that arises is making obvious recommendations because of excessive specialization (user A is only interested in categories B, C, and D, and the system cannot recommend items outside those categories, even though they could be interesting to them).
-
-
-
-### Data
-Data used from https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata/data
-
-### Concept used to build the model.pkl file: cosine_similarity
-
-1. Cosine Similarity is a metric that allows you to measure the similarity of the documents.
-
-2. To demonstrate cosine similarity function we need vectors. Here vectors are numpy array.
-
-3. Finally, Once we have vectors, We can call cosine_similarity() by passing both vectors. It will calculate the cosine similarity between these two.
-
-4. It will be a value between [0,1]. If it is 0 then both vectors are completely different. But in the place of that, if it is 1, It will be completely similar.
-
-### Steps to run:
-1. Clone the repository
-   ```
+1. Clone the repository:
+   ```bash
      https://github.com/Kyouma45/Movie_Recommendation_System
    ```
 2. Create a conda environment after opening the repository
