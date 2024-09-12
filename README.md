@@ -13,10 +13,10 @@ This model uses a **content-based filtering algorithm**.
 **Content-Based Filtering**:
 - Content-based systems use item attributes (such as movie genres, cast, director, etc.) to make recommendations.
 - Systems like Twitter and YouTube use similar algorithms to suggest content based on user preferences.
-- The system forms embeddings (vectors) based on features, such as the movies you watch or music you listen to.
-- **Recommendation Approach**: It creates a vector of item features and compares it with the user’s preferences to recommend similar items.
+- The system forms embeddings (vectors) based on features, such as the movies you watch or the music you listen to.
+- **Recommendation Approach**: It creates a vector of item features and compares them with the user’s preferences to recommend similar items.
 - **Advantages**: Personalized suggestions based on past user behavior.
-- **Limitations**: May lead to excessive specialization (i.e., the system might only recommend items from the same categories, missing out on other potentially interesting items).
+- **Limitations**: This may lead to excessive specialization (i.e., the system might only recommend items from the same categories, missing out on other potentially interesting items).
 
 ### Data:
 Data is sourced from the [TMDb Movie Metadata Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata/data).
@@ -33,7 +33,7 @@ The model uses **Cosine Similarity** to compare movies:
 
 1. Clone the repository:
    ```bash
-     https://github.com/Kyouma45/Movie_Recommendation_System
+   https://github.com/Kyouma45/Movie_Recommendation_System
    ```
 2. Create a conda environment after opening the repository
    make sure that you are using python>=3.7
@@ -47,7 +47,7 @@ The model uses **Cosine Similarity** to compare movies:
 
 4. Install the requirements
    ```
-     pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 5. Generate models
    ```
